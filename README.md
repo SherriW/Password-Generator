@@ -7,7 +7,7 @@ Application will generate a random password based on user-selected criteria. Thi
 N/A
 
 ## Visuals
- ![image](./assets/images/item.jpg) 
+ ![image](./assets/images/password-gen-screenshot.png) 
 
 ## Installation
 Code was created with Visual Studio Code and HomeBrew.
