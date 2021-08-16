@@ -75,11 +75,34 @@ var generatePassword = function () {
     return null;
   }
 
-  //Prompt user input of character type(s) OK - Yes; Cancle No
-  var isLowerCase = confirm("Does your password include lowercase?")
-  var isUpperCase = confirm("Does your password include Uppercase?")
-  var isSpecialCharacter= confirm("Does your password include  special?")
-  var isNumber = confirm("Does your password include number?")
-
-  console.log(isLowerCase)
-  // End of user input
+   // Determine user input and create appropriate output based on that input.
+  
+   for (let i = finalPassword.length; i < passwordsize; i++) {
+     
+    if (isLowerCase && finalPassword.length<passwordsize) {
+        var randomPickLowerCase = Math.floor(Math.random() * lowercase.length)
+        var pickOneLowerCaseLetter = lowercase.charAt(randomPickLowerCase)
+        finalPassword =finalPassword+ pickOneLowerCaseLetter 
+      }
+      if(isUpperCase && finalPassword.length<passwordsize) {
+        var randomPickUpperCase = Math.floor(Math.random() * uppercase.length)
+        var pickOneUpperCaseLetter = uppercase.charAt(randomPickUpperCase)
+        finalPassword =finalPassword+ pickOneUpperCaseLetter
+      }
+      if(isSpecialCharacter && finalPassword.length<passwordsize) {
+        var randomPickSpecial = Math.floor(Math.random() * specialCharcters.length)
+        var pickOneSpecialCharacterLetter = specialCharcters.charAt(randomPickSpecial)
+        finalPassword =finalPassword+ pickOneSpecialCharacterLetter
+      }
+      if(isNumber && finalPassword.length<passwordsize) {
+      var randomPickNumber = Math.floor(Math.random() * number.length)
+      var pickOneNumber = number.charAt(randomPickNumber)
+      finalPassword =finalPassword+  pickOneNumber
+      }
+  
+    }
+  
+      console.log(pickOneLowerCaseLetter, pickOneUpperCaseLetter, pickOneSpecialCharacterLetter, pickOneNumber)
+   
+  return finalPassword
+}   
