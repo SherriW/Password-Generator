@@ -53,10 +53,10 @@ var generatePassword = function () {
   }
 
   //Prompt user input of character type(s) OK - Yes; Cancle No
-  var isLowerCase = confirm("Does your password include lowercase?")
-  var isUpperCase = confirm("Does your password include Uppercase?")
-  var isSpecialCharacter= confirm("Does your password include  special?")
-  var isNumber = confirm("Does your password include number?")
+  var isLowerCase = confirm("Does your password include Lowercase Letters?")
+  var isUpperCase = confirm("Does your password include Uppercase Letters?")
+  var isSpecialCharacter= confirm("Does your password include Special Characters?")
+  var isNumber = confirm("Does your password include any Numbers?")
 
   console.log(isLowerCase)
   // End of user input
