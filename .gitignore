@@ -47,6 +47,9 @@ typings/
 # TypeScript cache
 *.tsbuildinfo
 
+# Optional macOS exclusion(s)
+.DS_Store
+
 # Optional npm cache directory
 .npm
 
