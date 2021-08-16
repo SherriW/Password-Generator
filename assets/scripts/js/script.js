@@ -60,3 +60,26 @@ var generatePassword = function () {
 
   console.log(isLowerCase)
   // End of user input
+
+  // Alerts
+  if (Number.isNaN(passwordsize)) {
+    alert("Password length must be a number.");
+    return null;
+    }
+  if (passwordsize < 8) {
+    alert ("Password length must be at least 8 characters.");
+    return null;
+    }
+  if (passwordsize >128) {
+    alert ("Password length must be less than 129.");
+    return null;
+  }
+
+  //Prompt user input of character type(s) OK - Yes; Cancle No
+  var isLowerCase = confirm("Does your password include lowercase?")
+  var isUpperCase = confirm("Does your password include Uppercase?")
+  var isSpecialCharacter= confirm("Does your password include  special?")
+  var isNumber = confirm("Does your password include number?")
+
+  console.log(isLowerCase)
+  // End of user input
