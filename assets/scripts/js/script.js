@@ -8,14 +8,55 @@
 // Get references to the #generate element in HTML
 var generateBtn = document.querySelector("#generate");
 
+// Add event listener to generate button ("listens" for 'click' event')
+generateBtn.addEventListener("click", writePassword);
+
+
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
-
 }
+// Generate password using specific variables and length
+var generatePassword = function () {
+  
+  // Set finalPassword display
+  var finalPassword = "" //finalPassword.length
 
-// Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+  // Define password selection options
+  var lowercase = "abcdefghijklmnopqrstuvwxyz"
+  var uppercase = "ABCDEFGHIJKLONOPQRSTUVWXYZ"
+  // Added more special characters to starter cfode
+  var specialCharcters = "!@#$%^&*()-+=[]{}"
+  var number = "0123456789"
+
+  // Prompt user for input of number of characters
+  var passwordsize = prompt("How many characters would you like your password to contain?")
+
+  // Console.logs Provide information in console about item noted
+  console.log(passwordsize)
+
+  //
+  if (Number.isNaN(passwordsize)) {
+    alert("Password length must be a number.");
+    return null;
+    }
+  if (passwordsize < 8) {
+    alert ("Password length must be at least 8 characters.");
+    return null;
+    }
+  if (passwordsize >128) {
+    alert ("Password length must be less than 129.");
+    return null;
+  }
+
+  //Prompt user input of character type(s) OK - Yes; Cancle No
+  var isLowerCase = confirm("Does your password include lowercase?")
+  var isUpperCase = confirm("Does your password include Uppercase?")
+  var isSpecialCharacter= confirm("Does your password include  special?")
+  var isNumber = confirm("Does your password include number?")
+
+  console.log(isLowerCase)
+  // End of user input
